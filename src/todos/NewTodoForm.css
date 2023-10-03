@@ -3,6 +3,7 @@
     padding: 16px;
     text-align: center;
     box-shadow: 0 4px 8px grey;
+    
 }
 
 .new-todo-input {
@@ -13,6 +14,7 @@
     border-radius: 8px;
     width: 70%;
     outline: none;
+    
 }
 
 .new-todo-button {
