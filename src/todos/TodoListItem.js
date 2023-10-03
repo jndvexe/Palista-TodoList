@@ -14,7 +14,6 @@ const TodoListItem = ({ todo, onRemovePressed, onCompletedPressed}) => (
                 onClick={() => onRemovePressed(todo.text)}
                 className="remove-button">Remove</button>
         </div>
-        
     </div>
 )
 
