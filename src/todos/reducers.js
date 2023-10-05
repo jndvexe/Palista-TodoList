@@ -1,17 +1,18 @@
-import { 
-    CREATE_TODO, 
-    MARK_TODO_AS_COMPLETED, 
+import {
+    CREATE_TODO,
     REMOVE_TODO,
-    LOAD_TOD0S_IN_PROGRESS,
+    MARK_TODO_AS_COMPLETED,
+    LOAD_TODOS_IN_PROGRESS,
     LOAD_TODOS_SUCCESS,
     LOAD_TODOS_FAILURE,
-} from "./actions";
+} from './actions';
 
+const initialState = { isLoading: false, data: [] };
 
-export const todos = (state = [], action) => {
+export const todos = (state = initialState, action) => {
     const { type, payload } = action;
 
-    switch (type){
+    switch (type) {
     case CREATE_TODO: {
         const { todo } = payload;
         return {
@@ -23,7 +24,7 @@ export const todos = (state = [], action) => {
         const { todo: todoToRemove } = payload;
         return {
             ...state,
-            data: state.data.filter(todo => todo.id !== todoToRemove.id)
+            data: state.data.filter(todo => todo.id !== todoToRemove.id),
         };
     }
     case MARK_TODO_AS_COMPLETED: {
@@ -31,14 +32,14 @@ export const todos = (state = [], action) => {
         return {
             ...state,
             data: state.data.map(todo => {
-                if (todo.id === updatedTodo.id ){
+                if (todo.id === updatedTodo.id) {
                     return updatedTodo;
                 }
                 return todo;
             }),
         };
     }
-    case LOAD_TODOS_SUCCESS:{
+    case LOAD_TODOS_SUCCESS: {
         const { todos } = payload;
         return {
             ...state,
@@ -46,7 +47,7 @@ export const todos = (state = [], action) => {
             data: todos,
         };
     }
-    case LOAD_TOD0S_IN_PROGRESS:
+    case LOAD_TODOS_IN_PROGRESS:
         return {
             ...state,
             isLoading: true,
