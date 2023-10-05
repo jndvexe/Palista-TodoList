@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { getTodos } from './selectors'
 import { addTodoRequest } from "./thunks";
 import './NewTodoForm.css';
 
@@ -31,7 +32,7 @@ const NewToDoForm = ({ todos, onCreatePressed }) => {
     }
 //take the state obj and return a piece of obj
 const mapStateToProps = state => ({
-    todos: state.todos,
+    todos: getTodos(state),
 });
 
 //function that allows components to trigger 
