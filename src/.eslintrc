@@ -1,0 +1,16 @@
+{
+  "env": {},
+  "extends": [],
+  "parser": "",
+  "plugins": [],
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["test/*.spec.js"], // Or *.test.js
+      "rules": {
+        "require-jsdoc": "off"
+      }
+    }
+  ],
+  "settings": {}
+}

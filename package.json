@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha \"src/**/*.test.js\" --require @babel/register --recursive",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +44,12 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.22.15"
+    "@babel/plugin-transform-runtime": "^7.22.15",
+    "@babel/register": "^7.22.15",
+    "chai": "^4.3.10",
+    "fetch-mock": "^9.11.0",
+    "mocha": "^10.2.0",
+    "node-fetch": "^3.3.2",
+    "sinon": "^16.1.0"
   }
 }
