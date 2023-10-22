@@ -1,0 +1,39 @@
+.NewTodoContainer {
+    
+    padding: 50px;
+    text-align: center;
+    background-image: url('/public/medium-plank.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+   
+}
+
+.NewTodoInputContainer {
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 8px;
+    width: 70%;
+    height: 70%;
+    outline: none;
+    
+}
+
+.NewTodoButton {
+    font-size: 16px;
+    padding: 15px 0 15px 0;
+    border: 1px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 8px;
+    box-shadow: 0 4px 8px grey;
+    width: 20%;
+    background-image: url('/public/btn_small.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: none;
+}
