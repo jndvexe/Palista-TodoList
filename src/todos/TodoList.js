@@ -16,7 +16,10 @@ const TodoList = ({ completedTodos, incompleteTodos, onRemovePressed, onComplete
         startLoadingTodos();
     }, []);
     
-    const loadingMessage = <div>Loading todos...</div>
+    const loadingMessage = 
+        <div className='Loading-Screen'>
+            <img src='bear-face.png' className="img_loading_screen" alt='Loading Screen'/>
+        </div>
     const content = (
         <div className='ListWrapper'>
             
